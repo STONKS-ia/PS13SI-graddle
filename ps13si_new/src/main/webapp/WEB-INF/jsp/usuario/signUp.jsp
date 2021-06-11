@@ -18,39 +18,54 @@
 
 </head>
 <body>
+
+<div class="login-box">
+
+	<h2>Novo Usuário</h2>
+
 	<form:form modelAttribute="usuarioModel"
 		action="${contextPath}/usuario" method="post" class="container">
 
-		<h1>Novo Usuário</h1>
-		
-		<form:input type="text" path="cpf" id="cpf" name="cpf"
-			placeholder="Cpf" maxlength="100" size="50" />
-			<font color="red"><form:errors path="cpf"/></font><br/>
+
+		<div class="user-box">
+			<form:input type="text" path="nome" id="nome" name="nome"
+						 maxlength="100" size="50" />
+			<font color="red"><form:errors path="nome"/></font>
+			<label>Nome</label>
+		</div>
+		<div class="user-box">
+			<form:input type="text" path="cpf" id="cpf" name="cpf"
+						maxlength="100" size="50" />
+			<font color="red"><form:errors path="cpf"/></font>
+			<label>CPF</label>
+		</div>
+		<div class="user-box">	<form:input type="text" path="email" id="email" name="email"
+											maxlength="100" size="50" />
+			<font color="red"><form:errors path="email"/></font>
+			<label>Email</label>
+		</div>
+		<div class="user-box">
+			<form:input type="password" path="senha" id="senha" name="senha"
+						 maxlength="50" size="50" />
+			<font color="red"><form:errors path="senha"/></font>
+			<label>Senha</label>
+		</div>
+		<div class="user-box">		<form:input type="text" path="telefone" id="telefone" name="telefone"
+												   maxlength="50" size="50" />
+			<font color="red"><form:errors path="telefone"/></font>
+			<label>Tipo</label>
+		</div>
 			
-		<form:input type="text" path="email" id="email" name="email"
-			placeholder="Email" maxlength="100" size="50" />
-			<font color="red"><form:errors path="email"/></font><br/>
-			
-		<form:input type="text" path="nome" id="nome" name="nome"
-			placeholder="nome" maxlength="100" size="50" />
-			<font color="red"><form:errors path="nome"/></font><br/>
-			
-				
-		<form:input type="password" path="senha" id="senha" name="senha"
-			placeholder="Senha" maxlength="50" size="50" />
-			<font color="red"><form:errors path="senha"/></font><br/>
-			
-		<form:input type="text" path="telefone" id="telefone" name="telefone"
-			placeholder="Telefone" maxlength="50" size="50" />
-			<font color="red"><form:errors path="telefone"/></font><br/>
-			
-		<form:input type="text" path="tipo" id="tipo" name="tipo"
-			placeholder="Tipo" maxlength="100" size="50" />
-			<font color="red"><form:errors path="tipo"/></font><br/>		
-			
-		
-			
-		<button type="submit">Cadastrar</button>
+		<button type="submit">
+			<a href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Cadastrar
+			</a></button>
 	</form:form>
+
+	</div>
 </body>
 </html>
