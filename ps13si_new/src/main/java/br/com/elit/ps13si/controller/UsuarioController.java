@@ -1,5 +1,7 @@
 package br.com.elit.ps13si.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +38,7 @@ public class UsuarioController {
 			@ModelAttribute("usuarioModel")  UsuarioModel usuarioModel,
 			Model model) {
 		
-		if ("atualizarUsuario".equals(page)) {			
-			model.addAttribute("usuarioModel", usuarioRep.findById(id).get());
-		}
+		
 		return USUARIO_FOLDER + page;
 	}
 	
@@ -100,9 +100,18 @@ public class UsuarioController {
 	}
 	
 	
-	@GetMapping("/{email}")
-	public String login(@PathVariable("email") String email, Model model, String senha) {		
-		return USUARIO_FOLDER + "usuario-detalhe";
+	@PostMapping
+	public String login( String email, Model model, String senha) {		
+		
+		
+	List<UsuarioModel> listaUsuario = usuarioRep.findByEmail(email);
+	
+	if (listaUsuario.get(0).getSenha() == senha) {
+		
+		return USUARIO_FOLDER;
+	}
+	
+		return USUARIO_FOLDER + "signIn";
 	}
 	
 	

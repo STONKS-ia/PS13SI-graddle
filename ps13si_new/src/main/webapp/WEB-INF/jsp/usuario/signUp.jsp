@@ -35,10 +35,7 @@
 			placeholder="Telefone" maxlength="50" size="50" />
 			<font color="red"><form:errors path="telefone"/></font><br/>
 			
-		<form:input type="text" path="municipio.idMunicipio" id="municipio"
-			name="municipio" placeholder="Codigo Municipio" maxlength="50"
-			size="50" />
-			<font color="red"><form:errors path="municipio.idMunicipio"/></font><br/>
+		
 			
 		<button type="submit">Cadastrar</button>
 	</form:form>

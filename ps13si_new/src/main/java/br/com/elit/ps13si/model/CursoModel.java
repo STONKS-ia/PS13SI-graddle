@@ -26,6 +26,8 @@ public class CursoModel {
 
     @Id
 	@Column(name = "ID_CURSO")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CURSO_PS_SEQ")
+	@SequenceGenerator(name = "CURSO_PS_SEQ", sequenceName = "CURSO_PS_SEQ", allocationSize = 1)
     public long getIdCurso() {
         return idCurso;
     }

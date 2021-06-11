@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -14,9 +15,7 @@ import javax.validation.constraints.Size;
 public class UsuarioModel {
 
 	
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  long idUsuario;
-	@Column(unique = true)
 	private String cpf;
 	private String nome;
 	private String email;
@@ -38,11 +37,17 @@ public class UsuarioModel {
 		this.senha = senha;
 		this.tipo = tipo;
 	}
+	
+	public UsuarioModel() {
+		
+	}
 
 
 
 	@Id
 	@Column(name = "ID_USUARIO")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USUARIO_PS_SEQ")
+	@SequenceGenerator(name = "USUARIO_PS_SEQ", sequenceName = "USUARIO_PS_SEQ", allocationSize = 1)
 	public long getIdUsuario() {
 		return idUsuario;
 	}

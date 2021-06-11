@@ -44,7 +44,6 @@
 						<tr>
 							<th data-field=email>Email</th>
 							<th data-field="phone">Telefone</th>
-							<th data-field="municipio.idMunicipio">Codigo Municipio</th>
 							
 							<th class="actions" width="220">Ações</th>
 						</tr>
