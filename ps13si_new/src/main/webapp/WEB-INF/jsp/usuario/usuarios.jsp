@@ -54,7 +54,7 @@
 						<tr>
 							<td>${usuarios.email}</td>
 							<td>${usuarios.telefone}</td>
-							<td>${usuarios.municipio.nomeMunicipio}</td>
+							
 							
 							<td class="actions">
 							

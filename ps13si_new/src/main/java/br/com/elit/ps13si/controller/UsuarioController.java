@@ -1,5 +1,6 @@
 package br.com.elit.ps13si.controller;
 
+import java.nio.file.FileSystemNotFoundException;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -26,95 +27,87 @@ import br.com.elit.ps13si.repository.UsuarioRepository;
 public class UsuarioController {
 
 	private static final String USUARIO_FOLDER = "usuario/";
-	
+
 	@Autowired
 	UsuarioRepository usuarioRep;
-	
-	
-	
+
 	@GetMapping("/form")
-	public String openForm(@RequestParam String page, 
-			@RequestParam(required= false) Integer id, 
-			@ModelAttribute("usuarioModel")  UsuarioModel usuarioModel,
-			Model model) {
-		
-		
+	public String openForm(@RequestParam String page, @RequestParam(required = false) Integer id,
+			@ModelAttribute("usuarioModel") UsuarioModel usuarioModel, Model model) {
+
 		return USUARIO_FOLDER + page;
 	}
-	
-	
+
 	@GetMapping
-	public String getAll(Model model) {		
-		
+	public String getAll(Model model) {
+
 		model.addAttribute("usuarios", usuarioRep.findAll());
-		
-		return USUARIO_FOLDER + "usuarios";		
+
+		return USUARIO_FOLDER + "usuarios";
 	}
-	
+
 	@GetMapping("/{id}")
 	public String findById(@PathVariable("id") int id, Model model) {
-		
+
 		model.addAttribute("usuario", usuarioRep.findById(id).get());
-		
+
 		return USUARIO_FOLDER + "usuario-detalhe";
 	}
-	
-	
+
 	@PostMapping
-	public String save(@Valid UsuarioModel usuarioModel, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){	
-		
-		if(bindingResult.hasErrors()) {
+	public String save(@Valid UsuarioModel usuarioModel, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes, Model model) {
+
+		if (bindingResult.hasErrors()) {
 			return USUARIO_FOLDER + "signUp";
 		}
-		
+
 		usuarioRep.save(usuarioModel);
-		redirectAttributes.addFlashAttribute("messages", "Usuario cadastrado com sucesso");		
-		return "redirect:/usuario";
-	} 
-	
-	
+		redirectAttributes.addFlashAttribute("messages", "Usuario cadastrado com sucesso");
+		return "redirect:/";
+	}
+
 	@PutMapping("/{id}")
-	public String update(@PathVariable("id") int id, @Valid UsuarioModel usuarioModel, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
-		
-		if(bindingResult.hasErrors()) {
+	public String update(@PathVariable("id") int id, @Valid UsuarioModel usuarioModel, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes, Model model) {
+
+		if (bindingResult.hasErrors()) {
 			return USUARIO_FOLDER + "atualizarUsuario";
 		}
-		
+
 		usuarioModel.setIdUsuario(id);
 		usuarioRep.save(usuarioModel);
 		redirectAttributes.addFlashAttribute("messages", "Usuario alterado com sucesso");
-		
-		
+
 		return "redirect:/usuario";
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public String deleteById(@PathVariable("id") int id, RedirectAttributes redirectAttributes) {
-		
+
 		usuarioRep.deleteById(id);
 		redirectAttributes.addFlashAttribute("messages", "usuario excluido com sucesso!");
 
-		
-		
 		return "redirect:/usuario";
 	}
-	
-	
-	@PostMapping
-	public String login( String email, Model model, String senha) {		
+
+	@PostMapping("/login")
+	public String login(UsuarioModel usuarioModel, Model model) {
+
+		List<UsuarioModel> listaUsuario = usuarioRep.findByEmail(usuarioModel.getEmail());
 		
 		
-	List<UsuarioModel> listaUsuario = usuarioRep.findByEmail(email);
 	
-	if (listaUsuario.get(0).getSenha() == senha) {
+			System.out.println(listaUsuario.get(0).getSenha());
+	
 		
-		return USUARIO_FOLDER;
-	}
-	
+		
+		if (listaUsuario.get(0).getSenha() == usuarioModel.getSenha()) {
+
+			return USUARIO_FOLDER;
+		}
+
 		return USUARIO_FOLDER + "signIn";
 	}
-	
-	
-	
-	
+
 }

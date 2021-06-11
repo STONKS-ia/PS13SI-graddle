@@ -23,17 +23,30 @@
 
 		<h1>Novo Usuário</h1>
 		
+		<form:input type="text" path="cpf" id="cpf" name="cpf"
+			placeholder="Cpf" maxlength="100" size="50" />
+			<font color="red"><form:errors path="cpf"/></font><br/>
+			
 		<form:input type="text" path="email" id="email" name="email"
 			placeholder="Email" maxlength="100" size="50" />
 			<font color="red"><form:errors path="email"/></font><br/>
 			
-		<form:input type="password" path="senha" id="password" name="password"
+		<form:input type="text" path="nome" id="nome" name="nome"
+			placeholder="nome" maxlength="100" size="50" />
+			<font color="red"><form:errors path="nome"/></font><br/>
+			
+				
+		<form:input type="password" path="senha" id="senha" name="senha"
 			placeholder="Senha" maxlength="50" size="50" />
 			<font color="red"><form:errors path="senha"/></font><br/>
 			
-		<form:input type="text" path="telefone" id="phone" name="phone"
+		<form:input type="text" path="telefone" id="telefone" name="telefone"
 			placeholder="Telefone" maxlength="50" size="50" />
 			<font color="red"><form:errors path="telefone"/></font><br/>
+			
+		<form:input type="text" path="tipo" id="tipo" name="tipo"
+			placeholder="Tipo" maxlength="100" size="50" />
+			<font color="red"><form:errors path="tipo"/></font><br/>		
 			
 		
 			

@@ -13,6 +13,8 @@ public class CursoModel {
     private long idCurso;
     private String nome;
     private String duracao;
+    private String descricaoCurso;
+    private String preco;
 
     public CursoModel(long idCurso, String nome, String duracao) {
         super();
@@ -32,7 +34,7 @@ public class CursoModel {
         return idCurso;
     }
 
-    public void setIdCurso(int idCurso) {
+    public void setIdCurso(long idCurso) {
         this.idCurso = idCurso;
     }
 
@@ -57,6 +59,28 @@ public class CursoModel {
     public void setDuracao(String duracao) {
         this.duracao = duracao;
     }
+
+	@Column(name = "DESCRICAO_CURSO")
+	public String getDescricaoCurso() {
+		return descricaoCurso;
+	}
+
+	public void setDescricaoCurso(String descricaoCurso) {
+		this.descricaoCurso = descricaoCurso;
+	}
+
+	@Column(name = "PRECO")
+	@NotNull(message = "Nome obrigatório")
+	@Size(min = 2, max = 50, message = "PRECO deve ser entre 2 e 50 caracteres")
+	public String getPreco() {
+		return preco;
+	}
+
+	public void setPreco(String preco) {
+		this.preco = preco;
+	}
+    
+   
 
 
 }

@@ -30,8 +30,8 @@
 				<p class="toolbar">
 					<a href="${contextPath}"><button class="btn btn-default">Voltar</button></a>
 					<a class="create btn btn-default"
-						href="${contextPath}/municipio/form?page=cadastroMunicipio">Novo
-						Município</a>
+						href="${contextPath}/curso/form?page=curso-cadastro">Novo
+						Curso</a>
 
 				</p>
 
@@ -42,26 +42,27 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th data-field=idMunicipio>IdMunicipio</th>
-							<th data-field=nomeMunicipio>Nome</th>
-							<th data-field="urlPortal">urlPortal</th>
+							<th data-field=idCurso>IdCurso</th>
+							<th data-field=nomeCurso>Nome</th>
+							<th data-field="duracao">Duracao</th>
 							<th class="actions" width="220">Ações</th>
 						</tr>
 					</thead>
 					<tbody>
 
-						<c:forEach items="${municipios}" var="municipio">
+						<c:forEach items="${cursos}" var="curso">
 							<tr>
-								<td>${municipio.idMunicipio}</td>
-								<td>${municipio.nomeMunicipio}</td>
-								<td>${municipio.urlPortal}</td>
-
+								<td>${curso.idCurso}</td>
+								<td>${curso.nomeCurso}</td>
+								<td>${curso.duracao}</td>
+								<td>${curso.preco}</td>
+								<td>${curso.descricaoCurso}</td>
 								<td class="actions"><form:form
-										action="${contextPath}/municipio/${municipio.idMunicipio}"
+										action="${contextPath}/curso/${curso.idCurso}"
 										method="delete">
 
 										<a class="btn btn-success btn-xs"
-											href="${contextPath}/municipio/form?page=atualizarMunicipio&id=${municipio.idMunicipio}">Editar</a>
+											href="${contextPath}/curso/form?page=atualizarCurso&id=${curso.idCurso}">Editar</a>
 										<input type="submit" value="Excluir"
 											class="btn btn-danger btn-xs">
 									</form:form></td>

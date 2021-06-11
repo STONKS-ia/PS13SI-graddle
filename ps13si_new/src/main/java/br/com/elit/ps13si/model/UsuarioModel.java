@@ -62,7 +62,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "CPF")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "CPF deve ser entre 2 e 50 caracteres")
 	public String getCpf() {
 		return cpf;
@@ -78,7 +77,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "NOME")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "NOME deve ser entre 2 e 50 caracteres")
 	public String getNome() {
 		return nome;
@@ -94,7 +92,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "EMAIL")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "EMAIL deve ser entre 2 e 50 caracteres")
 	public String getEmail() {
 		return email;
@@ -110,7 +107,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "TELEfONE")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "TELEfONE deve ser entre 2 e 50 caracteres")
 	public String getTelefone() {
 		return telefone;
@@ -126,7 +122,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "SENHA")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "SENHA deve ser entre 2 e 50 caracteres")
 	public String getSenha() {
 		return senha;
@@ -142,7 +137,6 @@ public class UsuarioModel {
 
 
 	@Column(name = "TIPO")
-	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "TIPO deve ser entre 2 e 50 caracteres")
 	public String getTipo() {
 		return tipo;

@@ -19,17 +19,7 @@
 
 </head>
 <body>
-	<form:form modelAttribute="municipioModel" action="${contextPath}/municipio/${municipioModel.idMunicipio}" method="put" class="container">
+	<h1>Atualizar Curso Hello world</h1>
 	
-		<h1>Atualizar Municipio</h1>
-		
-		<form:input type="text" path="nomeMunicipio" id="municipio"	name="municipio" placeholder="Nome Município" maxlength="50" size="50" />
-		<font color="red"><form:errors path="nomeMunicipio"/></font><br/>
-		
-		<form:input type="text" path="urlPortal" id="portal" name="portal" placeholder="Portal de transparência" maxlength="50" size="50" />
-		<font color="red"><form:errors path="urlPortal"/></font><br/>
-		
-		<button type="submit">Atualizar</button>
-	</form:form>
 </body>
 </html>

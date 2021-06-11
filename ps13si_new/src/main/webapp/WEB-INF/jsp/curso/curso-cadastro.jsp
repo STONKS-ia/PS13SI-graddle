@@ -14,26 +14,10 @@
 	href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700&display=swap"
 	rel="stylesheet" />
 
-<title>Cadastro Municipio</title>
+<title>Cadastro Cursos</title>
 
 </head>
 <body>
-	<form:form modelAttribute="municipioModel"
-		action="${contextPath}/municipio" method="post" class="container">
-
-		<h1>Novo Município</h1>
-
-		<form:input type="text" path="nomeMunicipio" id="municipio"
-			name="municipio" placeholder="Nome Município" maxlength="50" size="50" />
-		<font color="red"><form:errors path="nomeMunicipio" /></font>
-		<br />
-
-		<form:input type="text" path="urlPortal" id="portal" name="portal"
-			placeholder="Portal de transparência" maxlength="50" size="50"  />
-		<font color="red"><form:errors path="urlPortal" /></font>
-		<br />
-
-		<button type="submit">Cadastrar</button>
-	</form:form>
+	<h1>Hello world Cadastro Curso</h1>
 </body>
 </html>
