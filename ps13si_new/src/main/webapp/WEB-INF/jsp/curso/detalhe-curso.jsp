@@ -7,7 +7,7 @@
 <head>
 
 <c:set value="${pageContext.request.contextPath}" var="contextPath" />
-<link href="${contextPath}/css/style.css" rel="stylesheet">
+<link href="${contextPath}/css/detalheCurso.css" rel="stylesheet">
 
 <title>${curso.nome}</title>
 </head>

@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 public class UsuarioModel {
 
 	
-	private  long idUsuario;
+	private long idUsuario;
 	private String cpf;
 	private String nome;
 	private String email;
