@@ -94,16 +94,11 @@ public class UsuarioController {
 	public String login(UsuarioModel usuarioModel, Model model) {
 
 		List<UsuarioModel> listaUsuario = usuarioRep.findByEmail(usuarioModel.getEmail());
-		
-		
-	
-			System.out.println(listaUsuario.get(0).getSenha());
-	
-		
-		
-		if (listaUsuario.get(0).getSenha() == usuarioModel.getSenha()) {
 
-			return USUARIO_FOLDER;
+		System.out.println(listaUsuario.get(0).getSenha());
+
+		if (listaUsuario.get(0).getSenha().equals(usuarioModel.getSenha())) {
+			return "redirect:/curso";
 		}
 
 		return USUARIO_FOLDER + "signIn";

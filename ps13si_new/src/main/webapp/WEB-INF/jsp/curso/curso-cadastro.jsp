@@ -18,6 +18,33 @@
 
 </head>
 <body>
-	<h1>Hello world Cadastro Curso</h1>
+	<form:form modelAttribute="cursoModel"
+		action="${contextPath}/curso" method="post" class="container">
+
+		<h1>Novo curso</h1>
+
+		<form:input type="text" path="nome" id="nome" name="nome"
+			placeholder="nome" maxlength="100" size="50" />
+		<font color="red"><form:errors path="nome" /></font>
+		<br />
+
+		<form:input type="text" path="duracao" id="duracao" name="duracao"
+			placeholder="duracao" maxlength="100" size="50" />
+		<font color="red"><form:errors path="duracao" /></font>
+		<br />
+
+		<form:input type="text" path="descricaoCurso" id="descricaoCurso" name="descricaoCurso"
+			placeholder="descricaoCurso" maxlength="100" size="50" />
+		<font color="red"><form:errors path="descricaoCurso" /></font>
+		<br />
+
+		<form:input type="text" path="preco" id="preco" name="preco"
+			placeholder="preco" maxlength="50" size="50" />
+		<font color="red"><form:errors path="preco" /></font>
+		<br />
+
+		<button type="submit">Cadastrar</button>
+		
+	</form:form>
 </body>
 </html>

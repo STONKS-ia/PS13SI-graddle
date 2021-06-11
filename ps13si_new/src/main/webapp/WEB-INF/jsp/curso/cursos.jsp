@@ -63,7 +63,7 @@
 										action="${contextPath}/curso/${curso.idCurso}"
 										method="delete">
 										<a class="btn btn-success btn-xs"
-											href="${contextPath}/curso/form?page=detalhe-curso&id=${curso.idCurso}">Detalhes</a>
+											href="${contextPath}/curso/${curso.idCurso}">Detalhes</a>
 										<a class="btn btn-warning btn-xs"
 											href="${contextPath}/curso/form?page=atualizarCurso&id=${curso.idCurso}">Editar</a>
 										<input type="submit" value="Excluir"

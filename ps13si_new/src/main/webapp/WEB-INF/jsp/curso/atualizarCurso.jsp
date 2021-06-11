@@ -15,11 +15,37 @@
 	href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700&display=swap"
 	rel="stylesheet" />
 	
-<title>Atualizar Municipio</title>
+<title>Atualizar curso</title>
 
 </head>
 <body>
-	<h1>Atualizar Curso Hello world</h1>
-	
+	<form:form modelAttribute="cursoModel"
+		action="${contextPath}/curso" method="post" class="container">
+
+		<h1>Atualização curso</h1>
+
+		<form:input type="text" path="nome" id="nome" name="nome"
+			placeholder="nome" maxlength="100" size="50" />
+		<font color="red"><form:errors path="nome" /></font>
+		<br />
+
+		<form:input type="text" path="duracao" id="duracao" name="duracao"
+			placeholder="duracao" maxlength="100" size="50" />
+		<font color="red"><form:errors path="duracao" /></font>
+		<br />
+
+		<form:input type="text" path="descricaoCurso" id="descricaoCurso" name="descricaoCurso"
+			placeholder="descricaoCurso" maxlength="100" size="50" />
+		<font color="red"><form:errors path="descricaoCurso" /></font>
+		<br />
+
+		<form:input type="text" path="preco" id="preco" name="preco"
+			placeholder="preco" maxlength="50" size="50" />
+		<font color="red"><form:errors path="preco" /></font>
+		<br />
+
+		<button type="submit">Atualizar</button>
+		
+	</form:form>
 </body>
 </html>

@@ -29,9 +29,9 @@ public class CursoController {
 	CursosRepository cursoRep;
 
 	@GetMapping("/form")
-	public String openForm(@RequestParam String page, @RequestParam(required = false) Integer id,
+	public String openForm(@RequestParam String page, @RequestParam(required = false) Long id,
 			@ModelAttribute("cursoModel") CursoModel cursoModel, Model model) {
-
+		
 		return CURSO_FOLDER + page;
 	}
 
@@ -44,16 +44,16 @@ public class CursoController {
 	}
 
 	@GetMapping("/{id}")
-	public String findById(@PathVariable("id") int id, Model model) {
+	public String findById(@PathVariable("id") long id, Model model) {
 
 		model.addAttribute("curso", cursoRep.findById(id).get());
 
-		return CURSO_FOLDER + "curso-detalhe";
+		return CURSO_FOLDER + "detalhe-curso";
 	}
 
 	@PostMapping
-	public String save(@Valid CursoModel cursoModel, BindingResult bindingResult,
-			RedirectAttributes redirectAttributes, Model model) {
+	public String save(@Valid CursoModel cursoModel, BindingResult bindingResult, RedirectAttributes redirectAttributes,
+			Model model) {
 
 		if (bindingResult.hasErrors()) {
 			return CURSO_FOLDER + "curso-cadastro";
@@ -61,7 +61,7 @@ public class CursoController {
 
 		cursoRep.save(cursoModel);
 		redirectAttributes.addFlashAttribute("messages", "Curso cadastrado com sucesso");
-		return "redirect:/cursos";
+		return "redirect:/curso";
 	}
 
 	@PutMapping("/{id}")
@@ -76,15 +76,15 @@ public class CursoController {
 		cursoRep.save(cursoModel);
 		redirectAttributes.addFlashAttribute("messages", "Curso alterado com sucesso");
 
-		return "redirect:/cursos";
+		return "redirect:/curso";
 	}
 
 	@DeleteMapping("/{id}")
-	public String deleteById(@PathVariable("id") int id, RedirectAttributes redirectAttributes) {
+	public String deleteById(@PathVariable("id") long id, RedirectAttributes redirectAttributes) {
 
 		cursoRep.deleteById(id);
 		redirectAttributes.addFlashAttribute("messages", "Curso excluido com sucesso!");
 
-		return "redirect:/cursos";
+		return "redirect:/curso";
 	}
 }
