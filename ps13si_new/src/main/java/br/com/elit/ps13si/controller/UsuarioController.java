@@ -46,7 +46,7 @@ public class UsuarioController {
 	}
 
 	@GetMapping("/{id}")
-	public String findById(@PathVariable("id") int id, Model model) {
+	public String findById(@PathVariable("id") long id, Model model) {
 
 		model.addAttribute("usuario", usuarioRep.findById(id).get());
 
@@ -82,7 +82,7 @@ public class UsuarioController {
 	}
 
 	@DeleteMapping("/{id}")
-	public String deleteById(@PathVariable("id") int id, RedirectAttributes redirectAttributes) {
+	public String deleteById(@PathVariable("id") long id, RedirectAttributes redirectAttributes) {
 
 		usuarioRep.deleteById(id);
 		redirectAttributes.addFlashAttribute("messages", "usuario excluido com sucesso!");

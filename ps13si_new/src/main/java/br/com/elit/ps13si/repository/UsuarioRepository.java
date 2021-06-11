@@ -8,11 +8,9 @@ import org.springframework.data.repository.query.Param;
 
 import br.com.elit.ps13si.model.UsuarioModel;
 
-public interface UsuarioRepository extends JpaRepository<UsuarioModel, Integer>{
-
+public interface UsuarioRepository extends JpaRepository<UsuarioModel, Long>{
 	
-	@Query("SELECT s  FROM  USUARIOS s WHERE s.EMAIL = ?1")
-	List<UsuarioModel> findByEmail(@Param("email") String email);
-		
+	@Query("SELECT u  FROM  USUARIOS u WHERE u.EMAIL = ?1")
+	List<UsuarioModel> findByEmail(String email);		
 	
 }
