@@ -9,7 +9,7 @@
 
 <head>
 
-<title>Municipios - Listagem</title>
+<title>Curso - Listagem</title>
 
 <c:set value="${pageContext.request.contextPath}" var="contextPath" />
 
@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h1>Municipios</h1>
+				<h1>Curso</h1>
 
 				<p class="toolbar">
 					<a href="${contextPath}"><button class="btn btn-default">Voltar</button></a>
@@ -44,9 +44,9 @@
 						<tr>
 							<th data-field=idCurso>IdCurso</th>
 							<th data-field=nome>Nome</th>
-							<th data-field="duracao">Duracao</th>
-							<th data-field="descricaoCurso">Duracao</th>
-							<th data-field="preco">Duracao</th>
+							<th data-field="duracao">Duração</th>
+							<th data-field="descricaoCurso">Descrição</th>
+							<th data-field="preco">Preço</th>
 							<th class="actions" width="220">Ações</th>
 						</tr>
 					</thead>
