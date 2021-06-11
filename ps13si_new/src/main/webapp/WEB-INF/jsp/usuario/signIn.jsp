@@ -16,6 +16,10 @@
 <title>Logar</title>
 </head>
 <body>
+
+<div class="login-box">
+
+	<h2>S.T.O.N.K.S</h2>
 	<form:form modelAttribute="usuarioModel" action="${contextPath}/usuario/login" method="post"
 		class="container">
 
@@ -25,18 +29,30 @@
 			</div>
 		</spring:hasBindErrors>
 
-		<h1>S.T.O.N.K.S</h1>
-		<form:input type="text" path="email" id="user" name="user"
-			placeholder="Usuário" maxlength="50" size="50" />
-		<font color="red"><form:errors path="email" /></font>
-		<br />
+		<div class="user-box">
+			<form:input type="text" path="email" id="user" name="user"
+						 maxlength="50" size="50" />
+			<font color="red"><form:errors path="email" /></font>
+			<label>Email</label>
+		</div>
 
-		<form:input type="password" path="senha" id="password" name="password"
-			placeholder="Senha" maxlength="50" size="50"  />
-		<font color="red"><form:errors path="senha" /></font>
-		<br />
+		<div class="user-box">
+			<form:input type="password" path="senha" id="password" name="password"
+										  maxlength="50" size="50"  />
+			<font color="red"><form:errors path="senha" /></font>
+			<label>Password</label>
+		</div>
 
-		<button type="submit">Entrar</button>
+		<button type="submit">
+			<a href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Entrar
+			</a>
+		</button>
 	</form:form>
+</div>
 </body>
 </html>

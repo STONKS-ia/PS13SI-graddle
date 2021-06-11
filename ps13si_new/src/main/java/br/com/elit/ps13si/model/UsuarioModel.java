@@ -22,9 +22,7 @@ public class UsuarioModel {
 	private String telefone;
 	private String senha;
 	private String tipo;
-	
-	
-	
+
 	
 	public UsuarioModel(long idUsuario, String cpf, String nome, String email, String telefone, String senha,
 			String tipo) {
