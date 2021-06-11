@@ -1,6 +1,5 @@
 package br.com.elit.ps13si.controller;
 
-import java.nio.file.FileSystemNotFoundException;
 import java.util.List;
 
 import javax.validation.Valid;

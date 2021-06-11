@@ -43,8 +43,10 @@
 					<thead>
 						<tr>
 							<th data-field=idCurso>IdCurso</th>
-							<th data-field=nomeCurso>Nome</th>
+							<th data-field=nome>Nome</th>
 							<th data-field="duracao">Duracao</th>
+							<th data-field="descricaoCurso">Duracao</th>
+							<th data-field="preco">Duracao</th>
 							<th class="actions" width="220">Ações</th>
 						</tr>
 					</thead>
@@ -53,15 +55,16 @@
 						<c:forEach items="${cursos}" var="curso">
 							<tr>
 								<td>${curso.idCurso}</td>
-								<td>${curso.nomeCurso}</td>
+								<td>${curso.nome}</td>
 								<td>${curso.duracao}</td>
 								<td>${curso.preco}</td>
 								<td>${curso.descricaoCurso}</td>
 								<td class="actions"><form:form
 										action="${contextPath}/curso/${curso.idCurso}"
 										method="delete">
-
 										<a class="btn btn-success btn-xs"
+											href="${contextPath}/curso/form?page=detalhe-curso&id=${curso.idCurso}">Detalhes</a>
+										<a class="btn btn-warning btn-xs"
 											href="${contextPath}/curso/form?page=atualizarCurso&id=${curso.idCurso}">Editar</a>
 										<input type="submit" value="Excluir"
 											class="btn btn-danger btn-xs">
