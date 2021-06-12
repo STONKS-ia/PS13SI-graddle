@@ -21,11 +21,9 @@
 	</nav>
 
 	<article id="hero">
-		<h1>Build The Community Your Fans Will Love</h1>
+		<h1>Bootcamp Dev Full Cycle</h1>
 		<p>
-			Huddle re-imagines the way we build communities. You have a voice, but
-			so does your audience. Create connections with your users as you
-			engage in genuine discussion.
+			Video aulas com projetos reais para te transformar em um programador além do CRUD.
 		</p>
 		<a href="${contextPath}/usuario/form?page=signUp" class="button">Cadastre-se</a>
 		<img src="${contextPath}/img/learn.svg" alt="mockup" />
@@ -35,9 +33,11 @@
 		<div>
 			<h2>Grow Together</h2>
 			<p>
-				Generate meaningful discussions with your audience and build a
-				strong, loyal community. Think of the insightful conversations you
-				miss out on with a feedback form.
+				          É importante questionar o quanto a expansão dos mercados mundiais facilita a criação dos modos de operação convencionais. 
+				          Do mesmo modo, a constante divulgação das informações assume importantes posições 
+				          no estabelecimento dos métodos utilizados na avaliação de resultados. 
+				          Podemos já vislumbrar o modo pelo qual a revolução dos costumes pode nos levar 
+				          a considerar a reestruturação do processo de comunicação como um todo. .
 			</p>
 		</div>
 		<img src="${contextPath}/img/test.svg" alt="grow together" />
@@ -63,8 +63,9 @@
 		<input type="text" placeholder="Nome completo"/>
 		<input type="email" placeholder="Email"/>
 		<textarea placeholder="Digite sua mensagem aqui ..."/>
-
+				
 		</textarea>
+		<button>Enviar</button>
 	</article>
 </section>
 </body>

@@ -57,7 +57,7 @@
 		</div>
 			
 		<button type="submit">
-			<a href="#">
+			<a>
 				<span></span>
 				<span></span>
 				<span></span>
