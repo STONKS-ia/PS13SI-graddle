@@ -19,52 +19,46 @@
 </head>
 <body>
 
-<div class="login-box">
+	<div class="login-box">
 
-	<h2>Novo Usuário</h2>
+		<h2>Novo Usuário</h2>
 
-	<form:form modelAttribute="usuarioModel"
-		action="${contextPath}/usuario" method="post" class="container">
+		<form:form modelAttribute="usuarioModel"
+			action="${contextPath}/usuario" method="post" class="container">
 
 
-		<div class="user-box">
-			<form:input type="text" path="nome" id="nome" name="nome"
-						 maxlength="100" size="50" />
-			<font color="red"><form:errors path="nome"/></font>
-			<label>Nome</label>
-		</div>
-		<div class="user-box">
-			<form:input type="text" path="cpf" id="cpf" name="cpf"
-						maxlength="100" size="50" />
-			<font color="red"><form:errors path="cpf"/></font>
-			<label>CPF</label>
-		</div>
-		<div class="user-box">	<form:input type="text" path="email" id="email" name="email"
-											maxlength="100" size="50" />
-			<font color="red"><form:errors path="email"/></font>
-			<label>Email</label>
-		</div>
-		<div class="user-box">
-			<form:input type="password" path="senha" id="senha" name="senha"
-						 maxlength="50" size="50" />
-			<font color="red"><form:errors path="senha"/></font>
-			<label>Senha</label>
-		</div>
-		<div class="user-box">		<form:input type="text" path="telefone" id="telefone" name="telefone"
-												   maxlength="50" size="50" />
-			<font color="red"><form:errors path="telefone"/></font>
-			<label>Tipo</label>
-		</div>
-			
-		<button type="submit">
-			<a href="#">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				Cadastrar
-			</a></button>
-	</form:form>
+			<div class="user-box">
+				<form:input type="text" path="nome" id="nome" name="nome"
+					maxlength="100" size="50" />
+				<font color="red"><form:errors path="nome" /></font> <label>Nome</label>
+			</div>
+			<div class="user-box">
+				<form:input type="text" path="cpf" id="cpf" name="cpf"
+					maxlength="100" size="50" />
+				<font color="red"><form:errors path="cpf" /></font> <label>CPF</label>
+			</div>
+			<div class="user-box">
+				<form:input type="text" path="email" id="email" name="email"
+					maxlength="100" size="50" />
+				<font color="red"><form:errors path="email" /></font> <label>Email</label>
+			</div>
+			<div class="user-box">
+				<form:input type="password" path="senha" id="senha" name="senha"
+					maxlength="50" size="50" />
+				<font color="red"><form:errors path="senha" /></font> <label>Senha</label>
+			</div>
+			<div class="user-box">
+				<form:input type="text" path="telefone" id="telefone"
+					name="telefone" maxlength="50" size="50" />
+				<font color="red"><form:errors path="telefone" /></font> <label>Tipo</label>
+			</div>
+
+			<button type="submit">
+				<a> <span></span> <span></span> <span></span> <span></span>
+					Cadastrar
+				</a>
+			</button>
+		</form:form>
 
 	</div>
 </body>
