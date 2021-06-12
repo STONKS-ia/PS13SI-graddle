@@ -65,7 +65,7 @@
 		<textarea placeholder="Digite sua mensagem aqui ..."/>
 				
 		</textarea>
-		<button>Enviar</button>
+		<a href="#" >Enviar</a>
 	</article>
 </section>
 </body>

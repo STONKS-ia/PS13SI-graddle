@@ -45,8 +45,9 @@
 							<th data-field=idCurso>IdCurso</th>
 							<th data-field=nome>Nome</th>
 							<th data-field="duracao">Duração</th>
-							<th data-field="descricaoCurso">Descrição</th>
 							<th data-field="preco">Preço</th>
+							<th data-field="descricaoCurso">Descrição</th>
+							
 							<th class="actions" width="220">Ações</th>
 						</tr>
 					</thead>
