@@ -32,6 +32,10 @@ public class CursoController {
 	public String openForm(@RequestParam String page, @RequestParam(required = false) Long id,
 			@ModelAttribute("cursoModel") CursoModel cursoModel, Model model) {
 		
+		if("atualizarCurso".equals(page)) {
+			model.addAttribute("cursoModel", cursoRep.findById(id).get());
+		}
+		
 		return CURSO_FOLDER + page;
 	}
 
@@ -65,7 +69,7 @@ public class CursoController {
 	}
 
 	@PutMapping("/{id}")
-	public String update(@PathVariable("id") int id, @Valid CursoModel cursoModel, BindingResult bindingResult,
+	public String update(@PathVariable("id") long id, @Valid CursoModel cursoModel, BindingResult bindingResult,
 			RedirectAttributes redirectAttributes, Model model) {
 
 		if (bindingResult.hasErrors()) {

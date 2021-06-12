@@ -19,15 +19,9 @@
 
 <div class="login-box">
 
-	<h2>S.T.O.N.K.S</h2>
+	<h2>BootDev</h2>
 	<form:form modelAttribute="usuarioModel" action="${contextPath}/usuario/login" method="post"
 		class="container">
-
-		<spring:hasBindErrors name="usuarioModel">
-			<div class="alert alert-danger" role="alert">
-				<form:errors path="*" class="has-error" />
-			</div>
-		</spring:hasBindErrors>
 
 		<div class="user-box">
 			<form:input type="text" path="email" id="user" name="user"
@@ -44,7 +38,8 @@
 		</div>
 
 		<button type="submit">
-			<a >
+
+			<a>
 				<span></span>
 				<span></span>
 				<span></span>

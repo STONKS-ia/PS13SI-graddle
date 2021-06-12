@@ -14,7 +14,6 @@ import javax.validation.constraints.Size;
 @Table(name = "USUARIO_PS")
 public class UsuarioModel {
 
-	
 	private long idUsuario;
 	private String cpf;
 	private String nome;
@@ -23,7 +22,6 @@ public class UsuarioModel {
 	private String senha;
 	private String tipo;
 
-	
 	public UsuarioModel(long idUsuario, String cpf, String nome, String email, String telefone, String senha,
 			String tipo) {
 		super();
@@ -35,12 +33,10 @@ public class UsuarioModel {
 		this.senha = senha;
 		this.tipo = tipo;
 	}
-	
+
 	public UsuarioModel() {
-		
+
 	}
-
-
 
 	@Id
 	@Column(name = "ID_USUARIO")
@@ -50,29 +46,19 @@ public class UsuarioModel {
 		return idUsuario;
 	}
 
-
-
-
 	public void setIdUsuario(long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
-
-
 	@Column(name = "CPF")
-	@Size(min = 2, max = 50, message = "CPF deve ser entre 2 e 50 caracteres")
+	@Size(min = 11, max = 11, message = "CPF deve contém 11 caracteres")
 	public String getCpf() {
 		return cpf;
 	}
 
-
-
-
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
-
 
 	@Column(name = "NOME")
 	@Size(min = 2, max = 50, message = "NOME deve ser entre 2 e 50 caracteres")
@@ -80,14 +66,9 @@ public class UsuarioModel {
 		return nome;
 	}
 
-
-
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-
 
 	@Column(name = "EMAIL")
 	@Size(min = 2, max = 50, message = "EMAIL deve ser entre 2 e 50 caracteres")
@@ -95,29 +76,19 @@ public class UsuarioModel {
 		return email;
 	}
 
-
-
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
-
-	@Column(name = "TELEfONE")
-	@Size(min = 2, max = 50, message = "TELEfONE deve ser entre 2 e 50 caracteres")
+	@Column(name = "TELEFONE")
+	@Size(min = 11, max = 11, message = "TELEFONE deve ter 11 números (incluir DDD)")
 	public String getTelefone() {
 		return telefone;
 	}
 
-
-
-
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-
 
 	@Column(name = "SENHA")
 	@Size(min = 2, max = 50, message = "SENHA deve ser entre 2 e 50 caracteres")
@@ -125,14 +96,9 @@ public class UsuarioModel {
 		return senha;
 	}
 
-
-
-
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-
 
 	@Column(name = "TIPO")
 	@Size(min = 2, max = 50, message = "TIPO deve ser entre 2 e 50 caracteres")
@@ -140,13 +106,8 @@ public class UsuarioModel {
 		return tipo;
 	}
 
-
-
-
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
-	
-	
 }

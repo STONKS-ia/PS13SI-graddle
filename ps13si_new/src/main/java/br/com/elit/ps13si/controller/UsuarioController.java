@@ -91,14 +91,14 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/login")
-	public String login(UsuarioModel usuarioModel, Model model) {
-
+	public String login(UsuarioModel usuarioModel, BindingResult bindingResult, Model model) {
+		
 		List<UsuarioModel> listaUsuario = usuarioRep.findByEmail(usuarioModel.getEmail());
-
-		System.out.println(listaUsuario.get(0).getSenha());
-
-		if (listaUsuario.get(0).getSenha().equals(usuarioModel.getSenha())) {
-			return "redirect:/curso";
+		
+		if(listaUsuario.size() != 0) {
+			if (listaUsuario.get(0).getSenha().equals(usuarioModel.getSenha())) {
+				return "redirect:/curso";
+			}
 		}
 
 		return USUARIO_FOLDER + "signIn";

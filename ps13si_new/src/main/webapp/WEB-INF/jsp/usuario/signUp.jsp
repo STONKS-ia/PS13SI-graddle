@@ -19,12 +19,13 @@
 </head>
 <body>
 
-<div class="login-box">
+	<div class="login-box">
 
-	<h2>Novo Usuário</h2>
+		<h2>Novo Usuário</h2>
 
-	<form:form modelAttribute="usuarioModel"
-		action="${contextPath}/usuario" method="post" class="container">
+		<form:form modelAttribute="usuarioModel"
+			action="${contextPath}/usuario" method="post" class="container">
+
 
 
 		<div class="user-box">
@@ -65,6 +66,7 @@
 				Cadastrar
 			</a></button>
 	</form:form>
+
 
 	</div>
 </body>

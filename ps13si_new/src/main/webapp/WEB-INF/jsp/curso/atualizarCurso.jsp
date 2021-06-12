@@ -23,35 +23,35 @@
 <div class="login-box">
 <h2>Atualização de curso</h2>
 	<form:form modelAttribute="cursoModel"
-		action="${contextPath}/curso" method="post" class="container">
+		action="${contextPath}/curso/${cursoModel.idCurso}" method="put" class="container">
 
 		<div class="user-box">
 			<form:input type="text" path="nome" id="nome" name="nome"
 						maxlength="100" size="50" />
 			<font color="red"><form:errors path="nome" /></font>
-			<label>Nome curso</label>
+			<label for="nome">Nome curso</label>
 		</div>
 		<div class="user-box">
 			<form:input type="text" path="duracao" id="duracao" name="duracao"
 						maxlength="100" size="50" />
 			<font color="red"><form:errors path="duracao" /></font>
-			<label>Duração</label>
+			<label for="duracao">Duração</label>
 		</div>
 		<div class="user-box">
 			<form:input type="text" path="preco" id="preco" name="preco"
 						maxlength="50" size="50" />
 			<font color="red"><form:errors path="preco" /></font>
-			<label>Preço</label>
+			<label for="preco">Preço</label>
 		</div>
 		<div class="user-box">
 			<form:input type="text" path="descricaoCurso" id="descricaoCurso" name="descricaoCurso"
 						maxlength="100" size="50" />
 			<font color="red"><form:errors path="descricaoCurso" /></font>
-			<label>Descrição Curso</label>
+			<label for="descricaoCurso">Descrição Curso</label>
 		</div>
 
 		<button type="submit">
-			<a href="#">
+			<a>
 				<span></span>
 				<span></span>
 				<span></span>
