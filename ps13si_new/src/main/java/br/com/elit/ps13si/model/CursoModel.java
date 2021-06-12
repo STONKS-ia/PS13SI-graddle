@@ -39,7 +39,7 @@ public class CursoModel {
     }
 
 	@Column(name = "NOME")
-	@NotNull(message = "Nome obrigatÃ³rio")
+	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "NOME deve ser entre 2 e 50 caracteres")
     public String getNome() {
         return nome;
@@ -50,7 +50,7 @@ public class CursoModel {
     }
 
 	@Column(name = "DURACAO")
-	@NotNull(message = "Nome obrigatÃ³rio")
+	@NotNull(message = "Nome obrigatório")
 	@Size(min = 2, max = 50, message = "DURACAO deve ser entre 2 e 50 caracteres")
     public String getDuracao() {
         return duracao;
@@ -61,6 +61,7 @@ public class CursoModel {
     }
 
 	@Column(name = "DESCRICAO_CURSO")
+	@Size(min = 10, max = 500, message = "DESCRIÇÃO deve ser entre 10 e 500 caracteres")
 	public String getDescricaoCurso() {
 		return descricaoCurso;
 	}
@@ -70,8 +71,8 @@ public class CursoModel {
 	}
 
 	@Column(name = "PRECO")
-	@NotNull(message = "Nome obrigatÃ³rio")
-	@Size(min = 2, max = 50, message = "PRECO deve ser entre 2 e 50 caracteres")
+	@NotNull(message = "Preço obrigatório")
+	@Size(min = 2, max = 10, message = "PRECO deve ser entre 2 e 10 caracteres")
 	public String getPreco() {
 		return preco;
 	}
